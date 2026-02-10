@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Ditsha 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Comic Sans MS', cursive;
+    background:linear-gradient(180deg,#ffb6c1,#ffe4ec);
+    text-align:center;
+    overflow-x:hidden;
+    color:#b0005a;
+}
+.page{
+    display:none;
+    min-height:100vh;
+    padding:30px 15px;
+}
+.active{display:block;}
+h1{font-size:2.2rem;}
+p{font-size:1.1rem;line-height:1.6;}
+
+button{
+    background:#ff4d88;
+    border:none;
+    color:white;
+    padding:14px 26px;
+    margin:10px;
+    font-size:1rem;
+    border-radius:30px;
+    cursor:pointer;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+button:hover{transform:scale(1.08);}
+
+.teddy img{
+    width:160px;
+    animation:bounce 2s infinite;
+}
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.sorry-hands{
+    font-size:70px;
+    animation:shake 1.5s infinite;
+}
+@keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(5deg);}
+    50%{transform:rotate(0);}
+    75%{transform:rotate(-5deg);}
+    100%{transform:rotate(0);}
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:floatUp 6s linear infinite;
+}
+@keyframes floatUp{
+    0%{transform:translateY(0);opacity:.8;}
+    100%{transform:translateY(-110vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f78d3d7fd.mp3">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+<h1>Ditsha… thoda gussa ho? 🥺</h1>
+<div class="teddy">
+<img src="https://media.tenor.com/5zJ9b5b2n1kAAAAi/teddy-bear.gif">
+</div>
+<p>
+Ditsha, kal raat tum mere reply ka wait kar rahi thi 💔  
+aur maine bola tha main so raha hoon…  
+tumhe laga hoga ignore kar diya 😔
+</p>
+<button onclick="go(2)">Haan gussa hoon 😤</button>
+<button onclick="go(2)">Nahi gussa nahi 💗</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+<h1>Sorry Ditsha 💖</h1>
+<div class="sorry-hands">🙏</div>
+<p>
+Sach bol raha hoon Ditsha…  
+maine jaan-bujh ke ignore nahi kiya 😞  
+main sach mein so gaya tha  
+aur jab utha tab realise hua tum wait kar rahi thi 💔
+</p>
+<button onclick="go(3)">Theek hai… aage bolo 🧸</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+<h1>Chhota sa fun quiz 😅</h1>
+<div class="teddy">
+<img src="https://media.tenor.com/7zEw5nqR1fMAAAAi/cute-bear.gif">
+</div>
+<p>Kya maine Ditsha ko jaan-bujh ke ignore kiya?</p>
+<button onclick="wrong()">Yes 😐</button>
+<button onclick="wrong()">No 💕</button>
+
+<p>Kya tum mujhe maaf karogi?</p>
+<button onclick="go(4)">Yes 😌</button>
+<button onclick="go(4)">Obviously yes 🤗</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+<h1>Thank You Ditsha 💌</h1>
+<div class="teddy">
+<img src="https://media.tenor.com/mR6KZ3K2s6MAAAAi/bear-love.gif">
+</div>
+<p>
+Thank you Ditsha 💕  
+promise karta hoon aage se late reply ya ignore wali feeling  
+kabhi nahi dunga 🌸  
+tum mere liye special ho 🤍
+</p>
+<button onclick="alert('Ditsha ko tight virtual hug 🤗💗')">
+Send me a hug 🤗
+</button>
+</div>
+
+<script>
+function go(n){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page'+n).classList.add('active');
+}
+function wrong(){
+alert("Hehe 😅 galat jawab! Main sach mein so gaya tha 💗");
+}
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*3)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},400);
+</script>
+
+</body>
+  </html>
