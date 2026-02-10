@@ -123,19 +123,52 @@ aur jab utha tab realise hua tum wait kar rahi thi 💔
 
 <!-- PAGE 4 -->
 <div class="page" id="page4">
-<h1>Thank You Ditsha 💌</h1>
-<div class="teddy">
-<img src="https://media.tenor.com/mR6KZ3K2s6MAAAAi/bear-love.gif">
+<div id="sorryBox" style="display:none; margin-top:25px;">
+
+  <p style="font-size:1.15rem; color:#8b004f; margin-bottom:15px;">
+    Sometimes mistakes happen,<br>
+    but true friendship is always built on honest intentions 🌸
+  </p>
+
+  <img 
+    src="https://i.ibb.co/G3CrcQ1M/1770745319735.png"
+    style="width:230px;"
+  >
+
+  <p style="font-size:1rem; margin-top:10px;">
+    I’m really sorry, Ditsha.<br>
+    I was late — not careless.
+  </p>
+
 </div>
 <p>
-Thank you Ditsha 💕  
-promise karta hoon aage se late reply ya ignore wali feeling  
-kabhi nahi dunga 🌸  
-tum mere liye special ho 🤍
+Thank you, Ditsha 💕<br>
+I promise I’ll never make you feel ignored or unimportant again.<br>
+You truly matter to me 🤍
 </p>
-<button onclick="alert('Kabhi kabhi late ho jaata hoon, par dosti ko lightly kabhi nahi leta 🌸\n\nSorry Ditsha.')">
-A small honest message 🧸
+
+<button onclick="showSorry()">
+A small honest moment 🧸
 </button>
+
+<div id="sorryBox" style="display:none; margin-top:25px;">
+
+  <p style="font-size:1.15rem; color:#8b004f; margin-bottom:15px;">
+    Sometimes mistakes happen,<br>
+    but true friendship is always built on honest intentions 🌸
+  </p>
+
+  <img 
+    src="https://i.ibb.co/G3CrcQ1M/1770745319735.png"
+    style="width:230px;"
+  >
+
+  <p style="font-size:1rem; margin-top:10px;">
+    I’m really sorry, Ditsha.<br>
+    I was late — not careless.
+  </p>
+
+</div>
 </div>
 
 <script>
@@ -146,6 +179,9 @@ document.getElementById('page'+n).classList.add('active');
 function wrong(){
 alert("Hehe 😅 galat jawab! Main sach mein so gaya tha 💗");
 }
+    function showSorry(){
+  document.getElementById("sorryBox").style.display = "block";
+    }
 setInterval(()=>{
 let h=document.createElement("div");
 h.className="heart";
